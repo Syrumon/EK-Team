@@ -1,1 +1,170 @@
+let grid = [];
+let cube = [];
+let cube1 = [];
+let cube2 = [];
+let cube3 = [];
+let cube4 = [];
+let cube5 = [];
+let cube6 = [];
+let cube7 = [];
+let cube8 = [];
+let cube9 = [];
+let cube10 = [];
+let cube11 = [];
+let cube12 = [];
+let cube13 = [];
+let cube14 = [];
+let cube15 = [];
 
+function setup() {
+	createCanvas(1280, 720, WEBGL);
+	
+	//ground plane
+	for(let i = 0; i < 1; i++) {
+		cube.push(new Cube(45, 0, 0, 500, 5, 500, 0, 0, 150));
+	}
+	//right wall
+	for(let i = 0; i < 1; i++) {
+		cube1.push(new Cube(0, 0, 0, 5, 500, 500, 250, 250, 0));
+	}
+	//left wall
+	for(let i = 0; i < 1; i++) {
+		cube2.push(new Cube(0, 0, 0, 5, 500, 500, -500, 0, 0));
+	}
+	//back wall
+	for(let i = 0; i < 1; i++) {
+		cube3.push(new Cube(0, 0, 0, 500, 500, 5, 250, 0, -250));
+	}
+	//back right tv stand leg
+	for(let i = 0; i < 1; i++) {
+		cube4.push(new Cube(0, 0, 0, 10, 35, 10, 240, -230, 10));
+	}
+	//front right tv stand leg
+	for(let i = 0; i < 1; i++) {
+		cube5.push(new Cube(0, 0, 0, 10, 35, 10, 0, 0, 250));
+	}
+	//front left tv stand leg
+	for(let i = 0; i < 1; i++) {
+		cube6.push(new Cube(0, 0, 0, 10, 35, 10, -100, 0, 0));
+	}
+	//back left tv stand leg
+	for(let i = 0; i < 1; i++) {
+		cube7.push(new Cube(0, 0, 0, 10, 35, 10, 0, 0, -250));
+	}
+	//tv stand flat surface
+	for(let i = 0; i < 1; i++) {
+		cube8.push(new Cube(0, 0, 0, 110, 10, 260, 50, 20, 125));
+	}
+	//tv stand base
+	for(let i = 0; i < 1; i++) {
+		cube9.push(new Cube(0, 0, 0, 50, 5, 100, 0, 5, 0));
+	}
+	//tv panel
+	for(let i = 0; i < 1; i++) {
+		cube10.push(new Cube(0, 0, 0, 5, 100, 200, 0, 60, 0));
+	}
+	//table base
+	for(let i = 0; i < 1; i++) {
+		cube11.push(new Cube(0, 0, 0, 60, 10, 45, -300, -100, 225));
+	}
+	//table support
+	for(let i = 0; i < 1; i++) {
+		cube12.push(new Cube(0, 0, 0, 30, 50, 25, 0, 30, 0));
+	}
+	//table top
+	for(let i = 0; i < 1; i++) {
+		cube13.push(new Cube(0, 0, 0, 225, 5, 115, 0, 25, 0));
+	}
+	//bed mat
+	for(let i = 0; i < 1; i++) {
+		cube14.push(new Cube(0, 0, 0, 300, 5, 170, 30, -50, -250));
+		}
+	//pillow
+	for(let i = 0; i < 1; i++) {
+		cube15.push(new Cube(0, 0, 0, 30, 20, 80, -130, 0, 0));
+	}
+}
+
+function draw() {
+	background(50);
+	
+	//lights
+	let dirX = (mouseX / width - 0.5);
+  let dirY = (mouseY / height - 0.5);
+	ambientLight(50, 50, 50);
+  directionalLight(65, 65, 50, -dirX, dirY, 1);
+  
+	//ground plane
+	specularMaterial(50,50,50);
+	for(let i = 0; i < 1; i++) {
+		cube[0].display();
+	}
+	//right wall
+	specularMaterial(100,100,100);
+	for(let i = 0; i < 1; i++) {
+		cube1[0].display();
+	}
+	//left wall
+	specularMaterial(100,100,100);
+	for(let i = 0; i < 1; i++) {
+		cube2[0].display();
+	}
+	//back wall
+	specularMaterial(100,100,100);
+	for(let i = 0; i < 1; i++) {
+		cube3[0].display();
+	}
+	//back right tv stand leg
+	specularMaterial(200,10,10);
+	for(let i = 0; i < 1; i++) {
+		cube4[0].display();
+	}
+	//front right tv stand leg
+	for(let i = 0; i < 1; i++) {
+		cube5[0].display();
+	}
+	//front left tv stand leg
+	for(let i = 0; i < 1; i++) {
+		cube6[0].display();
+	}
+	//back left tv stand leg
+	for(let i = 0; i < 1; i++) {
+		cube7[0].display();
+	}
+	//tv stand flat surface
+	for(let i = 0; i < 1; i++) {
+		cube8[0].display();
+	}
+	//tv stand base
+	specularMaterial(0,0,0);
+	for(let i = 0; i < 1; i++) {
+		cube9[0].display();
+	}
+	//tv panel
+	for(let i = 0; i < 1; i++) {
+		cube10[0].display();
+	}
+	//table base
+	specularMaterial(50,50,150);
+	for(let i = 0; i < 1; i++) {
+		cube11[0].display();
+	}
+	//table support
+	for(let i = 0; i < 1; i++) {
+		cube12[0].display();
+	}
+	//table top
+	for(let i = 0; i < 1; i++) {
+		cube13[0].display();
+	}
+	//bed mat
+	specularMaterial('blue');
+	for(let i = 0; i < 1; i++) {
+		cube14[0].display();
+	}
+	//pillow
+	specularMaterial('white');
+	for(let i = 0; i < 1; i++) {
+		cube15[0].display();
+	}
+}
