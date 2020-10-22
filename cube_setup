@@ -1,1 +1,29 @@
-
+class Cube {
+	constructor(v1, v2, v3, h, w, d, x, y, z) {
+		//rotational vectors
+		this.v1 = v1;
+		this.v2 = v2;
+		this.v3 = v3;
+		
+		//cube dimensions
+		this.h = h;
+		this.w = w;
+		this.d = d;
+		
+		//cube position
+		this.x = x;
+		this.y = y;
+		this.z = z;
+	}
+	
+	display() {
+		//rotate
+		rotateX(this.v1) + rotateY(this.v2) + rotateZ(this.v3);
+		
+		//reposition if needed
+		translate(this.x, this.z, this.y);
+		
+		//cube creation
+		box(this.h, this.d, this.w);
+	}
+}
