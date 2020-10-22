@@ -87,6 +87,7 @@ function setup() {
 
 function draw() {
 	background(50);
+	noStroke();
 	
 	//lights
 	let dirX = (mouseX / width - 0.5);
